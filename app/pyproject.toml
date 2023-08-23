@@ -26,3 +26,12 @@ minversion = "7.0"
 addopts = "-rfEX -p pytester --strict-markers"
 python_files = ["test_*.py", "*_test.py", "testing/python/*.py"]
 testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+select = [
+  "D",   # pydocstyle
+]
+
+[tool.ruff.pydocstyle]
+convention = "google"
