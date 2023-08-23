@@ -8,4 +8,4 @@ class SampleTest(TestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         json_content = str(response.content, encoding='utf8')
-        self.assertJSONEqual(json_content, {'status': 'api' })
+        self.assertJSONEqual(json_content, {'status': 'api is running' })
