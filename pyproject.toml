@@ -22,6 +22,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "app.settings"
+pythonpath = ["app"]
 minversion = "7.0"
 addopts = "-rfEX -p pytester --strict-markers"
 python_files = ["test_*.py", "*_test.py", "testing/python/*.py"]
