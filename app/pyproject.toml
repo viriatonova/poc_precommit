@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = ["Viriato Sampaio <viriatosampaio@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.4"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-django = "^4.5.2"
+pre-commit = "^3.3.3"
+ruff = "^0.0.285"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "app.settings"
+minversion = "7.0"
+addopts = "-rfEX -p pytester --strict-markers"
+python_files = ["test_*.py", "*_test.py", "testing/python/*.py"]
+testpaths = ["tests"]
